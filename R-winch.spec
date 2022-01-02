@@ -4,7 +4,7 @@
 #
 Name     : R-winch
 Version  : 0.0.7
-Release  : 14
+Release  : 15
 URL      : https://cran.r-project.org/src/contrib/winch_0.0.7.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/winch_0.0.7.tar.gz
 Summary  : Portable Native and Joint Stack Traces
@@ -35,10 +35,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1635119461
+export SOURCE_DATE_EPOCH=1641149202
 
 %install
-export SOURCE_DATE_EPOCH=1635119461
+export SOURCE_DATE_EPOCH=1641149202
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -123,3 +123,5 @@ R CMD check --no-manual --no-examples --no-codoc winch || :
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/R/library/winch/libs/winch.so
+/usr/lib64/R/library/winch/libs/winch.so.avx2
+/usr/lib64/R/library/winch/libs/winch.so.avx512
