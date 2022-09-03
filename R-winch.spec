@@ -4,7 +4,7 @@
 #
 Name     : R-winch
 Version  : 0.0.9
-Release  : 20
+Release  : 21
 URL      : https://cran.r-project.org/src/contrib/winch_0.0.9.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/winch_0.0.9.tar.gz
 Summary  : Portable Native and Joint Stack Traces
