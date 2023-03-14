@@ -4,7 +4,7 @@
 #
 Name     : R-winch
 Version  : 0.0.12
-Release  : 25
+Release  : 26
 URL      : https://cran.r-project.org/src/contrib/winch_0.0.12.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/winch_0.0.12.tar.gz
 Summary  : Portable Native and Joint Stack Traces
@@ -15,9 +15,6 @@ Requires: R-winch-license = %{version}-%{release}
 Requires: R-procmaps
 BuildRequires : R-procmaps
 BuildRequires : buildreq-R
-# Suppress stripping binaries
-%define __strip /bin/true
-%define debug_package %{nil}
 
 %description
 stack trace for easier debugging of R packages with native code.
@@ -48,10 +45,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1675271563
+export SOURCE_DATE_EPOCH=1678826039
 
 %install
-export SOURCE_DATE_EPOCH=1675271563
+export SOURCE_DATE_EPOCH=1678826039
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/R-winch
 cp %{_builddir}/winch/src/vendor/libbacktrace/LICENSE %{buildroot}/usr/share/package-licenses/R-winch/555657fe7ff5be9969fa3387d8e465e0a1afa2f4 || :
